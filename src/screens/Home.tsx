@@ -1,5 +1,12 @@
+import { Featured, NewArrivals } from "components/home";
+
 const Home: React.FC = () => {
-  return null;
+  return (
+    <main>
+      <Featured />
+      <NewArrivals />
+    </main>
+  );
 };
 
 export default Home;
