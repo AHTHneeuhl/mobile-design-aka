@@ -1,4 +1,4 @@
-import { Button } from "components/common";
+import { ReactComponent as FilterIcon } from "assets/icons/filter.svg";
 
 const Search: React.FC = () => {
   return (
@@ -6,9 +6,9 @@ const Search: React.FC = () => {
       <input
         type="text"
         placeholder="Search"
-        className="bg-neutral-100 px-4 py-3 placeholder:text-neutral-500 text-lg rounded-full border-none outline-none focus:border-none focus:outline-none active:border-none active:outline-none"
+        className="bg-neutral-100 w-full px-4 py-3 placeholder:text-neutral-500 text-md rounded-full border-none outline-none focus:border-none focus:outline-none active:border-none active:outline-none"
       />
-      <Button size="lg">Search</Button>
+      <FilterIcon />
     </div>
   );
 };

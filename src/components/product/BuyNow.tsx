@@ -3,15 +3,22 @@ import { useNavigate } from "react-router-dom";
 import { applicationRoutes as routes } from "config";
 
 import { ReactComponent as CartIcon } from "assets/icons/cart-light.svg";
+import { useAppSelector } from "redux/store/hooks";
+import { useEffect, useState } from "react";
 
-type TProps = {
-  totalPrice: number;
-};
-
-const BuyNow: React.FC<TProps> = ({ totalPrice }) => {
+const BuyNow: React.FC = () => {
   const navigate = useNavigate();
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  const { price, quantity } = useAppSelector(
+    (state) => state.product.current.product
+  );
 
   const onBuyNow = () => navigate(routes.payment);
+
+  useEffect(() => {
+    setTotalPrice(price * quantity);
+  }, [price, quantity]);
 
   return (
     <div className="flex flex-row items-center justify-between mt-4">
