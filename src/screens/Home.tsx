@@ -1,4 +1,4 @@
-import { Featured, NewArrivals, Search, Topbar } from "components/home";
+import { Featured, Navbar, NewArrivals, Search, Topbar } from "components/home";
 
 const Home: React.FC = () => {
   return (
@@ -7,6 +7,7 @@ const Home: React.FC = () => {
       <Search />
       <Featured />
       <NewArrivals />
+      <Navbar />
     </main>
   );
 };
