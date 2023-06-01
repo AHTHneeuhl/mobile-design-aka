@@ -4,7 +4,7 @@ import navigation from "config/navigation";
 const Navbar: React.FC = () => {
   const { pathname } = useLocation();
   return (
-    <div className="py-5 bg-white shadow-xl rounded-tl-3xl flex flex-row items-center justify-evenly rounded-tr-3xl">
+    <div className="py-5 bg-white shadow-2xl rounded-tl-3xl flex flex-row items-center justify-evenly rounded-tr-3xl">
       {navigation.map(({ label, icon: Icon, path }) => (
         <div className="rounded-full bg-neutral-100 flex flex-row items-center gap-3 cursor-pointer">
           <div

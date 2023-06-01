@@ -3,9 +3,7 @@ type TProps = {
 };
 
 const Container: React.FC<TProps> = ({ children }) => {
-  return (
-    <div className="mx-auto xl:px-20 md:px-10 sm:px-2 px-4">{children}</div>
-  );
+  return <div className="mx-auto sm:px-2 px-4">{children}</div>;
 };
 
 export default Container;

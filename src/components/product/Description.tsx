@@ -1,15 +1,18 @@
-import { Container, Heading, Typography } from "components/common";
+import { Heading, Typography } from "components/common";
+import { useAppSelector } from "redux/store/hooks";
 
-type TProps = {
-  description: string;
-};
+const Description: React.FC = () => {
+  const { description } = useAppSelector(
+    (state) => state.product.current.product
+  );
 
-const Description: React.FC<TProps> = ({ description }) => {
   return (
-    <Container>
+    <div className="text-start">
       <Heading size="sm">Description</Heading>
-      <Typography className="mt-10">{description}</Typography>
-    </Container>
+      <Typography size="sm" className="mt-2 text-neutral-600 text-start">
+        {description}
+      </Typography>
+    </div>
   );
 };
 
