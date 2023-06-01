@@ -7,17 +7,9 @@ import { applicationRoutes as routes } from "config";
 const Product: React.FC = () => {
   const navigate = useNavigate();
 
-  const {
-    image,
-    description,
-    title,
-    subtitle,
-    ratings,
-    reviews,
-    quantity,
-    price,
-    favorite,
-  } = useAppSelector((state) => state.product.current.product);
+  const { image, description, title } = useAppSelector(
+    (state) => state.product.current.product
+  );
 
   useEffect(() => {
     if (!title) {
@@ -25,19 +17,12 @@ const Product: React.FC = () => {
     }
   }, [navigate, title]);
 
+  if (!title && !description) return null;
+
   return (
     <div>
       <ProductHeader image={image} />
-      <Content
-        title={title}
-        subtitle={subtitle}
-        ratings={ratings}
-        reviews={reviews}
-        quantity={quantity}
-        price={price}
-        description={description}
-        favorite={favorite}
-      />
+      <Content />
     </div>
   );
 };
