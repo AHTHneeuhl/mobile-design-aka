@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import appStore from "redux/store";
 import App from "./App";
 import "./index.css";
+import { Toaster } from "react-hot-toast";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -14,6 +15,24 @@ root.render(
     <Provider store={appStore}>
       <BrowserRouter>
         <App />
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            duration: 3000,
+            success: {
+              style: {
+                background: "green",
+                color: "white",
+              },
+            },
+            error: {
+              style: {
+                background: "red",
+                color: "white",
+              },
+            },
+          }}
+        />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>

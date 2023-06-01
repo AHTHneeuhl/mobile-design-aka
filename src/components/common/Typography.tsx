@@ -29,6 +29,7 @@ interface TProps
   extends HTMLAttributes<HTMLParagraphElement>,
     VariantProps<typeof typographyVariants> {}
 
+// Reusable HTML Paragraph component
 const Typography: React.FC<TProps> = forwardRef<HTMLParagraphElement, TProps>(
   ({ className, size, children, ...props }, ref) => {
     return (

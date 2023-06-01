@@ -1,4 +1,7 @@
 import { Button, Heading, Typography } from "components/common";
+import { useNavigate } from "react-router-dom";
+import { applicationRoutes as routes } from "config";
+
 import { ReactComponent as CartIcon } from "assets/icons/cart-light.svg";
 
 type TProps = {
@@ -6,6 +9,10 @@ type TProps = {
 };
 
 const BuyNow: React.FC<TProps> = ({ totalPrice }) => {
+  const navigate = useNavigate();
+
+  const onBuyNow = () => navigate(routes.payment);
+
   return (
     <div className="flex flex-row items-center justify-between mt-4">
       <div className="flex flex-col items-start">
@@ -14,7 +21,9 @@ const BuyNow: React.FC<TProps> = ({ totalPrice }) => {
       </div>
       <Button size="lg">
         <CartIcon />{" "}
-        <Typography className="text-white p-0 m-0 ml-3">Buy Now</Typography>
+        <Typography className="text-white p-0 m-0 ml-3" onClick={onBuyNow}>
+          Buy Now
+        </Typography>
       </Button>
     </div>
   );
