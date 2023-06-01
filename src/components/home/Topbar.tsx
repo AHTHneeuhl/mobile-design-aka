@@ -5,7 +5,7 @@ import menu from "assets/icons/menu.png";
 
 const Topbar: React.FC = () => {
   return (
-    <div className="flex flex-row items-center justify-between">
+    <div className="flex flex-row items-center justify-between my-2">
       <IconButton icon={menu} />
       <Avatar image={avatar} />
     </div>

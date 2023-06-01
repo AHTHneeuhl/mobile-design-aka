@@ -19,7 +19,7 @@ const FeaturedCard: React.FC<TProps> = ({
 }) => {
   return (
     <div
-      className="rounded-2xl shadow-sm bg-cover bg-center px-5 py-7"
+      className="rounded-2xl shadow-sm bg-cover bg-center px-5 py-7 w-96 border border-slate-300 my-4"
       style={{ backgroundImage: `url(${image})` }}
     >
       <Heading size="sm">{offPercentage}% Off</Heading>

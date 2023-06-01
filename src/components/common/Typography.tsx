@@ -6,12 +6,20 @@ const typographyVariants = cva(
   "max-w-prose text-slate-700 dark:text-slate-300 mb-2 text-center",
   {
     variants: {
+      variant: {
+        primary: "text-black",
+        secondary: "text-neutral-600",
+      },
       size: {
-        default: "text-base sm:text-lg",
-        sm: "text-sm sm:text-base",
+        default: "text-base",
+        sm: "text-sm",
+        md: "text-md",
+        lg: "text-lg",
+        xl: "text-xl",
       },
     },
     defaultVariants: {
+      variant: "primary",
       size: "default",
     },
   }

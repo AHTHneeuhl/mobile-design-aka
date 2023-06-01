@@ -3,17 +3,22 @@ import { cn } from "helpers/utils";
 import { HTMLAttributes, forwardRef } from "react";
 
 const headingVariants = cva(
-  "text-black dark:text-white text-center lg:text-left font-extrabold leading-tight tracking-tighter",
+  "text-left font-bold leading-tight tracking-tighter",
   {
     variants: {
+      variant: {
+        primary: "text-black",
+        secondary: "text-neutral-600",
+      },
       size: {
-        default: "text-4xl md:text-5xl lg:text-6xl",
-        lg: "text-5xl md:text-6xl lg:text-7xl",
-        sm: "text-2xl md:text-3xl lg:text-4xl",
+        default: "text-2xl md:text-3xl",
+        lg: "text-3xl md:text-4xl",
+        sm: "text-xl md:text-2xl",
       },
     },
     defaultVariants: {
       size: "default",
+      variant: "primary",
     },
   }
 );
