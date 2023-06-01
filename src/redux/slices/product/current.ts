@@ -15,6 +15,7 @@ export const product = createSlice({
         product: action.payload,
       };
     },
+    // Increment product quantity
     incrementQuantity: (state) => {
       return {
         ...state,
@@ -24,6 +25,7 @@ export const product = createSlice({
         },
       };
     },
+    // Decrement product quantity
     decrementQuantity: (state) => {
       return {
         ...state,

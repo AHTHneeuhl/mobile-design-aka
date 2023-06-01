@@ -1,6 +1,8 @@
 type TProps = {
   image: string;
 };
+
+// Reusable Avatar component
 const Avatar: React.FC<TProps> = ({ image }) => {
   return (
     <img

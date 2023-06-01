@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { HomeScreen, ProductScreen } from "screens";
+import { HomeScreen, PaymentScreen, ProductScreen } from "screens";
 import { applicationRoutes as routes } from "config";
 
 const AppRoutes: React.FC = () => {
@@ -7,6 +7,7 @@ const AppRoutes: React.FC = () => {
     <Routes>
       <Route path={routes.home} element={<HomeScreen />} />
       <Route path={routes.product} element={<ProductScreen />} />
+      <Route path={routes.payment} element={<PaymentScreen />} />
     </Routes>
   );
 };

@@ -27,6 +27,7 @@ interface TProps
   extends HTMLAttributes<HTMLHeadingElement>,
     VariantProps<typeof headingVariants> {}
 
+// Reusable HTML Headings component
 const Heading: React.FC<TProps> = forwardRef<HTMLHeadingElement, TProps>(
   ({ className, size, children, ...props }, ref) => {
     return (

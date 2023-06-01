@@ -25,17 +25,17 @@ const ProductHeader: React.FC<TProps> = () => {
         src={arrow}
         alt="favorite"
         onClick={onBack}
-        className="w-12 h-12 cursor-pointer object-cover absolute top-4 left-4 border border-black rounded-full"
+        className="w-10 h-10 cursor-pointer object-cover absolute top-4 left-4 border border-black rounded-full"
       />
       <img
         src={cartLight}
         alt="favorite"
-        className="w-12 h-12 object-cover absolute top-4 right-4"
+        className="w-10 h-10 object-cover absolute top-4 right-4"
       />
       <img
         src={favoriteLight}
         alt="favorite"
-        className="w-12 h-12 object-cover absolute bottom-4 right-4"
+        className="w-10 h-10 object-cover absolute bottom-4 right-4"
       />
     </div>
   );

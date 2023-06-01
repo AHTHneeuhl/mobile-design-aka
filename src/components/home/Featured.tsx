@@ -3,7 +3,7 @@ import FeaturedCard from "./FeaturedCard";
 
 const Featured: React.FC = () => {
   return (
-    <div className="flex flex-row items-center gap-5">
+    <div className="flex flex-row items-center gap-5 overflow-auto">
       {featured.map(
         ({ id, title, coupon, offPercentage, image, actionLabel }) => (
           <FeaturedCard
