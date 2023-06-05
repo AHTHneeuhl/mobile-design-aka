@@ -3,7 +3,7 @@ import { cn } from "helpers/utils";
 import { HTMLAttributes, forwardRef } from "react";
 
 const typographyVariants = cva(
-  "max-w-prose text-slate-700 dark:text-slate-300 mb-2 text-center",
+  "max-w-prose text-neutral-900 mb-2 text-center",
   {
     variants: {
       variant: {
